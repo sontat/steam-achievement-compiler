@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script
+          src="https://code.jquery.com/jquery-3.5.0.min.js"
+          integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+          crossorigin="anonymous"></script>
+         <link rel="stylesheet" type="text/css" href="steam.css">
+         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-controls">
+                <div class="intro">
+                    <div class="bullets">
+                        <div>Note: Your Steam profile must be public so your games and achievements can be read.</div>
+                        <div>Results are presented as a TSV file.</div>
+                        <div>Your first and latest achievement will always be shown in the results.</div>
+                    </div>
+                    <div class="x">
+                        <span>Close</span>
+                    </div>
+                </div>
+                <div>
+                    <input id="steam-id" input="text" placeholder="Steam profile ID/username">
+                </div>
+                <div id="radio-btns">
+                    <label><input type="radio" name="interval" value="1"> All achievements</label>
+                    <label><input type="radio" name="interval" value="10" checked> Every 10 achievements</label>
+                    <label><input type="radio" name="interval" value="100"> Every 100 achievements</label>
+                </div>
+                <div id="end-controls">
+                    <button id="start">Start job</button>
+                    <div id="progress">
+                        <div class="bar">
+                        </div>
+                    </div>
+                    <div id="pct">0%</div>
+                </div>
+                <div id="error-msg">All good</div>
+            </div>
+            <div class="results">
+                <textarea id="achievement-field" rows="20" cols="50" readonly></textarea>
+            </div>
+        </div>
+    </body>
+    <script src="steam.js" type="text/javascript"></script>
+</html>
